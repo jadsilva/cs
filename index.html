@@ -16,10 +16,10 @@
           <input type="submit" value="Preview"/>
         </form>
       </div>
-      <div ng-repeat="subject in subjects">
+      <div ng-repeat="subject in subjects track by $index">
         <h2>{{subject.title}}</h2>
         <ul>
-          <li ng-repeat="item in subject.itens">
+          <li ng-repeat="item in subject.itens track by $index">
             <span>{{item}}</span>
           </li>
         </ul>
