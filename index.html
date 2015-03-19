@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Cheat Sheets</title>
+    <link href="/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-resource.js"></script>
+  </head>
+  <body ng-app="cheat-sheets">
+    <div ng-controller="InputCtrl">
+      <div>
+        <form ng-submit="render()">
+          <label>Input:</label>
+          <textarea name="input" ng-model="input" required></textarea>
+          <input type="submit" value="Preview"/>
+        </form>
+      </div>
+      <div ng-repeat="subject in subjects">
+        <h2>{{subject.title}}</h2>
+        <ul>
+          <li ng-repeat="item in subject.itens">
+            <span>{{item}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/cs.js"></script>
+  </body>
