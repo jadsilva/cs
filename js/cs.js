@@ -21,7 +21,6 @@ function parseSubjects(str) {
       }
       if (ilines == 0) {
         blocks[iblocks].title += c;
-        //ilines = -1;
       } else if (blocks[iblocks].itens[ilines-1] === undefined) {
         blocks[iblocks].itens[ilines-1] = c; 
       } else {
